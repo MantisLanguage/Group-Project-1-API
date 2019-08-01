@@ -30,5 +30,5 @@
 5. HTML/CSS layout - Nicholas
 6. Drop down filtration menu 
 7. New Release page/AJAX call 
-
+9.
 
