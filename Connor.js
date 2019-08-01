@@ -1,7 +1,11 @@
+var queryURL = "https://api.rawg.io/api/games/search?q=" + game + "&limit=10"
+var game = $(this).attr("")
+
 
     $.ajax({
-        url: "https://www.gamespot.com/api/games/?api_key=e77ca37b5dab23b4680fd29b5b7ccb994e61db4c",
+        url: queryURL,
         method: "GET"
+
       }).then(function(response) {
         console.log(response);
       });
