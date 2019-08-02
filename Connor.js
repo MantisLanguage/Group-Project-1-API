@@ -11,31 +11,38 @@ $("#search").click(function () {
     }).then(function (response) {
         var results = response.results
         console.log(results);
-       for (var i = 0; i < results.length; i++) {
-               var imgURL = results[i].short_screenshots[1].image;
-                var gameRate = results[i].rating;
-                var gameName = results[i].name;
-                // var vidClip = results[i].clip; 
-                var name = $("<div>")
-                var img = $("<img>")
-                var rate = $("<div>").addClass()
-                // var vid = $("<video>") 
+        for (var i = 0; i < results.length; i++) {
+            var imgURL = results[i].short_screenshots[1].image;
+            var gameRate = results[i].rating;
+            var gameName = results[i].name;
+            var consoleType = results[i].platforms[0].platform.name;
+
+            // var vidClip = results[i].clip; 
+            var cType = $("<div>")
+            var Gname = $("<div>")
+            var img = $("<img>")
+            var rate = $("<div>").addClass()
+            // var vid = $("<video>") 
             img.attr('src', imgURL);
             // vid.attr('src', vidClip) 
             rate.text(gameRate);
-            name.text(gameName)
-           $("#temp").append(img);
+            Gname.text(gameName)
+            cType.text(consoleType)
+            $("#temp").append(img);
             $("#temp").append(rate);
-            $("#temp").append(name);
+            $("#temp").append(Gname);
+            $("#temp").append(cType)
             // $("#temp").append(vid); 
 
-            
-        
 
-        }});
+
+
+
+        }
+    });
 
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?game=" + game,
+        url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?game=" + game,
         method: "GET",
         headers: {
             "Client-ID":
