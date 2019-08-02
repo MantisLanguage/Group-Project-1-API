@@ -15,14 +15,24 @@ $("#search").click(function () {
 
     }).then(function (response) {
         console.log(response);
-    });
+        for (var i = 0; i < results.length; i++) {
+            var gameIMG = $('<img>');
+            var gameRate = response.ratings;
+            var results = response.data;
+            gameIMG.attr('src', results[i].short_screenshots[1].url);
+            gameRate.attr('src', results[i].ratings.url)
+            $(".gameImage").prepend(gameIMG)
+            $(".gameRating").prepend(gameRate)
+        }});
 
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?game=" + game,
-        method: "GET", 
-        headers: {"Client-ID":
-        "cdfnz8vncfslalcwt8h9257c540ta1"},
-    
+        method: "GET",
+        headers: {
+            "Client-ID":
+                "cdfnz8vncfslalcwt8h9257c540ta1"
+        },
+
 
     }).then(function (response) {
         console.log(response);
