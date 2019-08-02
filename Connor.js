@@ -14,15 +14,23 @@ $("#search").click(function () {
        for (var i = 0; i < results.length; i++) {
                var imgURL = results[i].short_screenshots[1].image;
                 var gameRate = results[i].rating;
+                var gameName = results[i].name;
+                // var vidClip = results[i].clip; 
+                var name = $("<div>")
                 var img = $("<img>")
-                var rate = $("<div>")
-            console.log(gameRate);
-            console.log(imgURL);
+                var rate = $("<div>").addClass()
+                // var vid = $("<video>") 
             img.attr('src', imgURL);
+            // vid.attr('src', vidClip) 
             rate.text(gameRate);
+            name.text(gameName)
            $("#temp").append(img);
             $("#temp").append(rate);
+            $("#temp").append(name);
+            // $("#temp").append(vid); 
+
             
+        
 
         }});
 
@@ -32,10 +40,6 @@ $("#search").click(function () {
         headers: {
             "Client-ID":
                 "cdfnz8vncfslalcwt8h9257c540ta1",
-
-    //             // data[""0""].thumbnail_url
-
-    //             // results[1].short_screenshots[1]
         },
 
 
@@ -44,4 +48,3 @@ $("#search").click(function () {
     });
 
 })
- // Twitch Client-ID: "cdfnz8vncfslalcwt8h9257c540ta1"
