@@ -28,7 +28,6 @@ $("#search").click(function () {
 });
 
 
-<<<<<<< HEAD
     $.ajax({
         url: "https://api.rawg.io/api/games?page_size=5&search=yoshi",
         method: "GET"
@@ -46,5 +45,3 @@ $("#search").click(function () {
         document.getElementById("myList").appendChild(node);
       }
  
-=======
->>>>>>> ff6bc34f70af9ad5da3b3a3b24ed7f151192091e
