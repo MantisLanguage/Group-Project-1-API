@@ -5,3 +5,14 @@
       }).then(function(response) {
         console.log(response);
       });
+
+
+      function cardGenerator() {
+        imgSrc = "";
+        var image = $("<img>").classList.add('gameImg');
+        image.addClass("src", imgSrc);
+
+        node.appendChild(textnode);
+        document.getElementById("myList").appendChild(node);
+      }
+ 
