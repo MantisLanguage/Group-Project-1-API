@@ -28,7 +28,10 @@
 3. AJAX call for TwitchTV - Connor 
 4. On click function for search and input function - Connor
 5. HTML/CSS layout - Nicholas
-6. Drop down filtration menu 
-7. New Release page/AJAX call 
-9.
+6. Drop down filtration menu  - Michael 
+7. New Release page/AJAX call - Nicholas
+8. Research and apply new Library - Michael
+9. Prepend RAWG info - Connor
+10. Prepend Twitch info - Nicholas
+11. Clean up Prepended data - Michael/Nicholas 
 
