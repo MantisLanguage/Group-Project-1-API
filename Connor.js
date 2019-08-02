@@ -14,11 +14,12 @@ $("#search").click(function () {
         method: "GET"
 
     }).then(function (response) {
+        var results = response;
         console.log(response);
         for (var i = 0; i < results.length; i++) {
             var gameIMG = $('<img>');
-            var gameRate = response.ratings;
-            var results = response.data;
+            var gameRate = results.ratings;
+            var results = results.data;
             gameIMG.attr('src', results[i].short_screenshots[1].url);
             gameRate.attr('src', results[i].ratings.url)
             $(".gameImage").prepend(gameIMG)
