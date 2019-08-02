@@ -14,7 +14,9 @@ $("#search").click(function () {
         method: "GET"
 
     }).then(function (response) {
+        var results = response;
         console.log(response);
+<<<<<<< HEAD
         var results = response.results
         console.log(results);
          for (var i = 0; i < results.length; i++) {
@@ -28,6 +30,16 @@ $("#search").click(function () {
         //     gameRate.text(results[1].rating)
             // $(".gameImage").prepend(gameIMG)
             // $(".gameRating").prepend(gameRate)
+=======
+        for (var i = 0; i < results.length; i++) {
+            var gameIMG = $('<img>');
+            var gameRate = results.ratings;
+            var results = results.data;
+            gameIMG.attr('src', results[i].short_screenshots[1].url);
+            gameRate.attr('src', results[i].ratings.url)
+            $(".gameImage").prepend(gameIMG)
+            $(".gameRating").prepend(gameRate)
+>>>>>>> 4e6fb0ba864cad7c5e77b5ad6cdb457a88876a20
         }});
 
     // $.ajax({
