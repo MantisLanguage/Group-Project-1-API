@@ -1,5 +1,9 @@
 .gameCard {
     display: inline-block;
+    margin: 5px;
+}
+.cardBody {
+    text-align: center;
 }
 
 footer {
