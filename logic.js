@@ -37,6 +37,7 @@ $("#search").click(function () {
 });
 
 
+<<<<<<< HEAD
 
 // $("#search").on("click", function () {
 //   event.preventDefault();
@@ -73,3 +74,25 @@ $("#search").click(function () {
 //     };
 //   });
 // });
+=======
+// <div class="card border-primary mb-3 gameCard" style="max-width: 20rem;">
+// <div class="card-header gameName">Name of Game</div>
+// <div class="card-body">
+//     <h4 class="card-title"></h4>
+//     <div class="card-body">
+//         <img style="height: 200px; width: 100%; display: inline-block;"
+//             src="#"
+//             alt="Card image"
+//             class="gameImage">
+//         <p class="card-text gameRating"></p>
+//         <p class="card-text gameReview"></p>
+//         <p class="card-text gamePlatform"></p>
+//         <p class="card-text gameReleaseDate"></p>
+//         <p class="lead twitchBtn">
+//             <a class="btn btn-primary btn-lg" href="#" role="button">Link to twitch</a>
+//         </p>
+//     </div>
+// </div>
+// </div>
+// </div>
+>>>>>>> master

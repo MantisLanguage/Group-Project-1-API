@@ -5,6 +5,30 @@
 .cardBody {
     text-align: center;
 }
+
 footer {
     text-align: center;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+a.navbar-brand {
+    margin-left: 15px;
+    text-align: center;
+}
+
+.nav-item {
+
+font-weight: bold;
+
+}
+
+i.fas {
+
+    box-sizing: 200px;
+    box-sizing: 200px;
+
 }

@@ -1,10 +1,5 @@
-// $("#search").on("click", function(){
-//  alert ("test");
-
 $("#search").click(function () {
     event.preventDefault();
-    // alert("test");
-    // console.log("test")
     var game = $("#searchValue").val()
 
 
@@ -14,24 +9,44 @@ $("#search").click(function () {
         method: "GET"
 
     }).then(function (response) {
-        var results = response;
-        console.log(response);
+        var results = response.results
+        console.log(results);
         for (var i = 0; i < results.length; i++) {
-            var gameIMG = $('<img>');
-            var gameRate = results.ratings;
-            var results = results.data;
-            gameIMG.attr('src', results[i].short_screenshots[1].url);
-            gameRate.attr('src', results[i].ratings.url)
-            $(".gameImage").prepend(gameIMG)
-            $(".gameRating").prepend(gameRate)
-        }});
+            var imgURL = results[i].short_screenshots[1].image;
+            var gameRate = results[i].rating;
+            var gameName = results[i].name;
+            var consoleType = results[i].platforms[0].platform.name;
+
+            // var vidClip = results[i].clip; 
+            var cType = $("<div>")
+            var Gname = $("<div>")
+            var img = $("<img>")
+            var rate = $("<div>").addClass()
+            // var vid = $("<video>") 
+            img.attr('src', imgURL);
+            // vid.attr('src', vidClip) 
+            rate.text(gameRate);
+            Gname.text(gameName)
+            cType.text(consoleType)
+            $("#temp").append(img);
+            $("#temp").append(rate);
+            $("#temp").append(Gname);
+            $("#temp").append(cType)
+            // $("#temp").append(vid); 
+
+
+
+
+
+        }
+    });
 
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?game=" + game,
+        url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?game=" + game,
         method: "GET",
         headers: {
             "Client-ID":
-                "cdfnz8vncfslalcwt8h9257c540ta1"
+                "cdfnz8vncfslalcwt8h9257c540ta1",
         },
 
 
@@ -39,9 +54,4 @@ $("#search").click(function () {
         console.log(response);
     });
 
-});
-
-
- // Twitch Client-ID: "cdfnz8vncfslalcwt8h9257c540ta1",
-
-
+})
