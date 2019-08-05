@@ -1,5 +1,9 @@
 .gameCard {
     display: inline-block;
+    margin: 5px;
+}
+.cardBody {
+    text-align: center;
 }
 
 footer {
@@ -10,12 +14,6 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-
-a.navbar-brand {
-    margin-left: 15px;
-    text-align: center;
-}
-
 .nav-item {
 
 font-weight: bold;
