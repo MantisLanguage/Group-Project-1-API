@@ -2,58 +2,65 @@ $("#search").click(function () {
   event.preventDefault();
   $(".mainDiv").empty();
   var game = $("#searchValue").val()
-
-  $.ajax({
-    url: "https://api.rawg.io/api/games?search=" + game,
-    method: "GET"
-
-  }).then(function (response) {
-    var results = response.results;
-    console.log(results);
-    for (let i = 0; i < results.length; i++) {
-
-
-      $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=8432d765a7fad2b8c978c0fb766a47031ec3abb5&format=json&query=" + results[i].name + "&resources=game&limit=1",
-        method: "GET"
-      }).then(function (response) {
-        var gameName = results[i].name;
-        var imgURL = results[i].short_screenshots[1].image;
-        var gameRate = results[i].rating;
-        var consoleType = results[i].platforms[0].platform.name;
-        var descResults = response.results
-        console.log(descResults)
-
-        var description = descResults[0].deck || "No Description Available";
-
-
-        var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
-
-        var cardHeader = $("<div class='card-header gameName'>");
-        cardHeader.text(gameName);
-        mainCard.append(cardHeader);
-
-        var thumbImg = $("<img style='height: 200px; width: 100%; display: inline-block;'>");
-        thumbImg.attr("src", imgURL);
-
-        var cardBody = $("<div class='card-body cardBody'>");
-        mainCard.append(cardBody);
-        cardBody.append(thumbImg);
-        var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + "<br>" + "Description:" + description;
-        cardBody.append(gameInfo);
-
-        $(".mainDiv").append(mainCard);
-      });
-
-
-    }
+  console.log(game.length)
+  if (game.length === 0) {
+    
+  } else {
+    
+    
+    $.ajax({
+      url: "https://api.rawg.io/api/games?search=" + game,
+      method: "GET"
+      
+    }).then(function (response) {
+      var results = response.results;
+      console.log(results);
+      for (let i = 0; i < results.length; i++) {
+        
+        
+        $.ajax({
+          url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=8432d765a7fad2b8c978c0fb766a47031ec3abb5&format=json&query=" + results[i].name + "&resources=game&limit=1",
+          method: "GET"
+        }).then(function (response) {
+          var gameName = results[i].name;
+          var imgURL = results[i].short_screenshots[1].image;
+          var gameRate = results[i].rating;
+          var consoleType = results[i].platforms[0].platform.name;
+          var descResults = response.results
+          console.log(descResults)
+          
+          var description = descResults[0].deck || "No Description Available";
+          
+          
+          var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
+          
+          var cardHeader = $("<div class='card-header gameName'>");
+          cardHeader.text(gameName);
+          mainCard.append(cardHeader);
+          
+          var thumbImg = $("<img style='height: 200px; width: 100%; display: inline-block;'>");
+          thumbImg.attr("src", imgURL);
+          
+          var cardBody = $("<div class='card-body cardBody'>");
+          mainCard.append(cardBody);
+          cardBody.append(thumbImg);
+          var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + "<br>" + "Description:" + description;
+          cardBody.append(gameInfo);
+          
+          $(".mainDiv").append(mainCard);
+        });
+        
+        
+      }
+    });
+    
+  }
   });
-});
-
-
-
-// $("#search").on("click", function () {
-//   event.preventDefault();
+  
+  
+  
+  // $("#search").on("click", function () {
+    //   event.preventDefault();
 //   var game = $("#searchValue").val();
 //   $.ajax({
 //     url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?" + game,
