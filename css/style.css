@@ -19,7 +19,24 @@ h1 {
 font-weight: bold;
 
 }
-
+.sign {
+    margin-top: 0;
+    text-align: center;
+    background-image: url(../images/gameCityLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.page-footer {
+    margin-top: 100px;
+}
+.container {
+    height: 500px;
+    width: 500px;
+}
+.landingBody {
+    background-image: url(../images/cityBackground.jpg);
+    background-size: cover;
+}
 /* i.fas {
 
     box-sizing: 200px;
