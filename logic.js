@@ -21,13 +21,13 @@ $("#search").click(function () {
         var imgURL = results[i].short_screenshots[1].image;
         var gameRate = results[i].rating;
         var consoleType = results[i].platforms[0].platform.name;
-        var descResults = response.results
+        var descResults = response.results;
         console.log(descResults)
 
         var description = descResults[0].deck || "No Description Available";
 
 
-        var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
+        var mainCard = $("<div class='card animated flipInX border-primary mb-3 gameCard' style='max-width: 20rem;'>");
 
         var cardHeader = $("<div class='card-header gameName'>");
         cardHeader.text(gameName);
@@ -39,7 +39,7 @@ $("#search").click(function () {
         var cardBody = $("<div class='card-body cardBody'>");
         mainCard.append(cardBody);
         cardBody.append(thumbImg);
-        var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + "<br>" + "Description:" + description;
+        var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + "<br>" + "Description: " + description;
         cardBody.append(gameInfo);
 
         $(".mainDiv").append(mainCard);
