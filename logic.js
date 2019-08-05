@@ -8,7 +8,7 @@ $("#search").click(function () {
     method: "GET"
 
   }).then(function (response) {
-    var results = response.results
+    var results = response.results;
     console.log(results);
     for (let i = 0; i < results.length; i++) {
 
@@ -56,7 +56,7 @@ $("#search").click(function () {
 //   event.preventDefault();
 //   var game = $("#searchValue").val();
 //   $.ajax({
-//     url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?" + game,
+//     url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?" + game,
 //     method: "GET",
 //     headers: {
 //       "Client-ID":
