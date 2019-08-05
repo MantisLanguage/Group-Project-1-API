@@ -7,14 +7,13 @@ $("#search").click(function () {
     method: "GET"
 
   }).then(function (response) {
-    var results = response.results
+    var results = response.results;
     console.log(results);
     for (var i = 0; i < results.length; i++) {
       var imgURL = results[i].short_screenshots[1].image;
       var gameRate = results[i].rating;
       var gameName = results[i].name;
       var consoleType = results[i].platforms[0].platform.name;
-
 
       var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
 
@@ -30,6 +29,7 @@ $("#search").click(function () {
       cardBody.append(thumbImg);
       var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType;
       cardBody.append(gameInfo);
+      
 
       $(".mainDiv").append(mainCard); 
     }
@@ -42,7 +42,7 @@ $("#search").click(function () {
 //   event.preventDefault();
 //   var game = $("#searchValue").val();
 //   $.ajax({
-//     url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?" + game,
+//     url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?" + game,
 //     method: "GET",
 //     headers: {
 //       "Client-ID":
