@@ -1,8 +1,8 @@
 $("#search").click(function () {
     event.preventDefault();
-    var game = $("#searchValue").val()
-
-
+    var game = $("#searchValue").val();
+    var recallName = [];
+console.log(recallName)
     console.log(game)
     $.ajax({
         url: "https://api.rawg.io/api/games?search=" + game,
@@ -27,13 +27,49 @@ $("#search").click(function () {
             // vid.attr('src', vidClip) 
             rate.text(gameRate);
             Gname.text(gameName)
+            recallName.push(gameName)
             cType.text(consoleType)
-            $("#temp").append(img);
-            $("#temp").append(rate);
-            $("#temp").append(Gname);
-            $("#temp").append(cType)
+            $(".mainDiv").append(img);
+            $(".mainDiv").append(rate);
+            $(".mainDiv").append(Gname);
+            $(".mainDiv").append(cType)
+            console.log(recallName)
             // $("#temp").append(vid); 
+            // Pushing into Array:
 
+            // gameName.push(recallName)
+
+            // function(results){
+            //     gameName.push(results)
+        
+        
+
+            // recallName.forEach(function(){
+            //     requests.push($.get(gameName));
+            // });
+        // for (var i = 0; i < recallName.length; i++) {
+
+            $.ajax({
+                url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=8432d765a7fad2b8c978c0fb766a47031ec3abb5&format=json&query=" + gameName + "&resources=game&limit=1",
+                method: "GET",
+        
+        
+            }).then(function (response) {
+                var results = response.results
+                console.log(results)
+                if(results[0].deck){
+                    $(".mainDiv").append(results[0].deck);
+                }
+               
+            });
+        // }
+ // for (var i = 0; i < results.length; i++) {
+                //     var description = results[i].description
+                //     var dScrip = $("<div>")
+                //     dScrip.text(description)
+                //     $("#temp").append(dScrip)
+        
+                // }
 
 
 
@@ -54,4 +90,8 @@ $("#search").click(function () {
         console.log(response);
     });
 
+<<<<<<< HEAD
+});
+=======
 })
+>>>>>>> 106072e2c88af2708d44105f733cab2eafc527be
