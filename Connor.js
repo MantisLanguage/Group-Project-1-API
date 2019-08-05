@@ -54,24 +54,4 @@ $("#search").click(function () {
         console.log(response);
     });
 
-
-
-
-    // $.ajax({
-    //     url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=8432d765a7fad2b8c978c0fb766a47031ec3abb5&format=json&query=" + game + "&resources=game",
-    //     method: "GET",
-
-
-    // }).then(function (response) {
-    //     console.log(response)
-    //     var results = response.results
-    //     for (var i = 0; i < results.length; i++) {
-    //         var description = results[i].description
-    //         var dScrip = $("<div>")
-    //         dScrip.text(description)
-    //         $("#temp").append(dScrip)
-
-    //     }
-    // });
-
-});
+})
