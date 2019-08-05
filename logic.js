@@ -14,10 +14,6 @@ $("#search").click(function () {
       var gameRate = results[i].rating;
       var gameName = results[i].name;
       var consoleType = results[i].platforms[0].platform.name;
-      
-      
-    
-      
 
       var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
 
@@ -31,7 +27,7 @@ $("#search").click(function () {
       var cardBody = $("<div class='card-body cardBody'>");
       mainCard.append(cardBody);
       cardBody.append(thumbImg);
-      var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + gameRatings;
+      var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType;
       cardBody.append(gameInfo);
       
 
