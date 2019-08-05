@@ -43,7 +43,7 @@ $("#search").on("click", function () {
   event.preventDefault();
   var game = $("#searchValue").val();
   $.ajax({
-    url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/helix/streams?game=" + game,
+    url: "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/streams?game=" + game,
     method: "GET",
     headers: {
       "Client-ID":
