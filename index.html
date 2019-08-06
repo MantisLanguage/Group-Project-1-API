@@ -15,48 +15,23 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Game City - Home Page</title>
-    
+    <title>Game City - Top Rated</title>
+
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html"><i class="fas fa-gamepad"></i>Game City</a>
-    
+<body class="landingBody">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link animated flipInX delay-1s" href="topRated.html">Top Rated</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link animated flipInX delay-2s" href="recentlyReleased.html">Recently Released</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link animated flipInX delay-3s" href="comingSoon.html">Coming Soon</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" id="searchValue" placeholder="Search for specific game">
-                <button class="btn btn-secondary my-2 my-sm-0" id="search" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    <div class="jumbotron">
-        <h1 class="display-3 animated bounceInRight delay-4s" ">Search your Favorite Game!</h1>
-        <p class=" lead animated bounceInRight delay-5s">These are the 25 next games due to be released. Find the new
-            game you are interested in
-            checking out, read some reviews and watch people playing it live now before you decide to purchase.</p>
-        <hr class="my-4">
-        <div class="mainDiv"></div>
+    <h4 class="titleText"></h4>
+    <div class=landingBtn>
+        <form action="comingSoon.html">
+            <button class="enterBtn" type="submit">Click to enter</button>
+        </form>
+        <p><a href="comingSoon.html"><img class="animated flip" id="logo" src="images/gameCityLogo.png"></a></p>
     </div>
-    <footer>Made by "The Dream Team"<br><a href="github.com">Github</a></footer>
-
+    <div class="container">
+        <div class="sign justify-content-center align-items-center vh-100"></div>
+    </div>
+ 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -69,7 +44,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="logic.js"></script>
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </body>
 
 </html>
