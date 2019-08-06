@@ -19,19 +19,19 @@ $("#search").click(function () {
       for (let i = 0; i < results.length; i++) {
         
         
-        $.ajax({
-          url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=8432d765a7fad2b8c978c0fb766a47031ec3abb5&format=json&query=" + results[i].name + "&resources=game&limit=1",
-          method: "GET"
-        }).then(function (response) {
+        // $.ajax({
+        //   url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=69ea76a955ce9930f89d964bb86ed1e1e2e17ef6&format=json&query=" + results[i].name + "&resources=game&limit=1",
+        //   method: "GET"
+        // }).then(function (response) {
           var gameName = results[i].name;
           var imgURL = results[i].short_screenshots[1].image;
           var gameRate = results[i].rating;
           var consoleType = results[i].platforms[0].platform.name;
-          var descResults = response.results
+          // var descResults = response.results
           var releaseDate = results[i].released
-          console.log(descResults)
+          // console.log(descResults)
           
-          var description = descResults[0].deck || "No Description Available";
+          // var description = descResults[0].deck || "No Description Available";
           
           
           var mainCard = $("<div class='animated slideInRight card mb-3 gameCard' style='max-width: 20rem;'>");
@@ -46,18 +46,16 @@ $("#search").click(function () {
           var cardBody = $("<div class='card-body cardBody'>");
           mainCard.append(cardBody);
           cardBody.append(thumbImg);
-          var gameInfo ="<h6 style='color: #05132D'><strong>Release: <br></h6></strong>" + releaseDate + "<br>" + "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType + "<br>" + "<h6 style='color: #05132D'><strong>Description: <br></h6></strong>" + description;
+          var gameInfo ="<h6 style='color: #05132D'><strong>Release: <br></h6></strong>" + releaseDate + "<br>" + "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType;
           cardBody.append(gameInfo);
           
           $(".mainDiv").append(mainCard);
-        });
+}});
         
         
       }
     });
     
-  }
-  });
   
   $(document).ready(function () {
     setTimeout(function(){
