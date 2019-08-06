@@ -2,6 +2,7 @@
     display: inline-block;
     margin: 5px;
 }
+
 .cardBody {
     text-align: center;
 }
@@ -14,10 +15,20 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
+
 .nav-item {
+    font-weight: bold;
+}
 
-font-weight: bold;
+div.mainDiv {
+    display: inline-block;
+    position: auto;
+}
 
+div.card {
+    display: inline-block;
+    position: auto;
+    vertical-align: auto;
 }
 
 /* i.fas {
