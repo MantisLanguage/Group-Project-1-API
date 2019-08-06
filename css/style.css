@@ -5,6 +5,7 @@
 }
 .cardBody {
     text-align: center;
+    color: #05132D;
 }
 
 footer {
@@ -16,11 +17,93 @@ h1 {
     font-weight: bold;
 }
 .nav-item {
-
-font-weight: bold;
-
+    font-weight: bold;
+}   
+.container {
+    height: 500px;
+    width: 500px;
 }
-
+.landingBody {
+    background-image: url(../images/cityBackground.jpg);
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    margin: 0;
+    flex-grow: 1;
+}
+.titleText {
+    color: #FF5151;
+}
+.enterBtn {
+    background-color:#000014;
+    border-color:#000014;
+    color: white;
+}
+#logo {
+    display: none;
+}
+.navContainer {
+    height: 50px;
+}
+.smallLogo {
+    height: 40px;
+}
+.navbar2 {
+    background-image: url(../images/navbar.PNG);
+    background-size: cover;
+}
+.welcomeDiv {
+    text-align: center;
+}
+.mainDiv {
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: center;
+    justify-items: center; 
+}
+h6 {
+    display: inline-block;
+}
+.gameName {
+    text-align: center;
+    color: #05132D;
+    font-weight: bolder;
+}
+.mainContainer {
+    min-width: 100%;
+    align-content: stretch;
+    margin: 0px;
+    display: inline-block;
+    padding-bottom:60px;
+    min-height:100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    justify-items: center; 
+    border-color: #05132D;
+}
+.gameCard {
+    align-content: stretch;
+    border:2px solid #05132D;
+}
+.footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    height: 60px;
+    background: #05132D;
+    text-align: center;
+}
+body {
+   margin:0px;
+   padding:0px;
+   height:100%;
+}
 /* i.fas {
 
     box-sizing: 200px;
