@@ -21,6 +21,11 @@
 
 
 #### Sketch
+<a href="https://uofachafsfft0-w7m6380.slack.com/?redir=%2Ffiles-pri%2FTL1G16MNU-FM64GESUX%2Fsearch_page_-_2.jpg">Search Screen</a>.
+<a href="https://uofachafsfft0-w7m6380.slack.com/?redir=%2Ffiles-pri%2FTL1G16MNU-FM48ZCDE1%2Flanding_page_-_1.jpg">FLanding Screen</a>.
+<a href="https://uofachafsfft0-w7m6380.slack.com/?redir=%2Ffiles-pri%2FTL1G16MNU-FM6D5UACE%2Fgame_results_-_3.jpg">Results</a>.
+
+
 
 ###### Assignment Responisibilities 
 1. Sketch - Michael
