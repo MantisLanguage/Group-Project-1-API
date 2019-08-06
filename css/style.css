@@ -16,9 +16,7 @@ h1 {
     font-weight: bold;
 }
 .nav-item {
-
-font-weight: bold;
-
+    font-weight: bold;
 }
 .sign {
     margin-top: 0;
@@ -27,9 +25,6 @@ font-weight: bold;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.page-footer {
-    margin-top: 100px;
-}
 .container {
     height: 500px;
     width: 500px;
@@ -37,6 +32,69 @@ font-weight: bold;
 .landingBody {
     background-image: url(../images/cityBackground.jpg);
     background-size: cover;
+    text-align: center;
+}
+.titleText {
+    color: #FF5151;
+}
+.enterBtn {
+    background-color: #174575;
+    border-color: #174575;
+}
+.navContainer {
+    height: 50px;
+}
+.smallLogo {
+    height: 40px;
+}
+.navbar2 {
+    background-image: url(../images/navbar.PNG);
+    background-size: cover;
+}
+.welcomeDiv {
+    text-align: center;
+}
+.mainDiv {
+   align-content: stretch;
+   align-items: stretch;
+}
+h6 {
+    display: inline-block;
+}
+.gameName {
+    text-align: center;
+    color: #DF691A;
+    font-weight: bolder;
+}
+.mainContainer {
+    min-width: 100%;
+    align-content: stretch;
+    margin: 0px;
+    display: inline-block;
+    padding-bottom:60px;
+    min-height:100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+.gameCard {
+    align-content: stretch;
+}
+.footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    height: 60px;
+    background: #05132D;
+    text-align: center;
+}
+body {
+   margin:0px;
+   padding:0px;
+   height:100%;
 }
 /* i.fas {
 

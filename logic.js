@@ -1,6 +1,7 @@
 $("#search").click(function () {
   event.preventDefault();
   $(".mainDiv").empty();
+  $(".welcomeDiv").empty();
   var game = $("#searchValue").val()
   console.log(game.length)
   if (game.length === 0) {
@@ -32,7 +33,7 @@ $("#search").click(function () {
           var description = descResults[0].deck || "No Description Available";
           
           
-          var mainCard = $("<div class='card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
+          var mainCard = $("<div class='animated lightSpeedIn card border-primary mb-3 gameCard' style='max-width: 20rem;'>");
           
           var cardHeader = $("<div class='card-header gameName'>");
           cardHeader.text(gameName);
@@ -44,7 +45,7 @@ $("#search").click(function () {
           var cardBody = $("<div class='card-body cardBody'>");
           mainCard.append(cardBody);
           cardBody.append(thumbImg);
-          var gameInfo = "Rating: " + gameRate + "<br>" + "Platform: " + consoleType + "<br>" + "Description:" + description;
+          var gameInfo = "<h6 style='color: #DF691A'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #DF691A'><strong>Platform: </h6></strong> " + consoleType + "<br>" + "<h6 style='color: #DF691A'><strong>Description: <br></h6></strong>" + description;
           cardBody.append(gameInfo);
           
           $(".mainDiv").append(mainCard);
