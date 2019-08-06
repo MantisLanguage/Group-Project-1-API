@@ -28,6 +28,7 @@ $("#search").click(function () {
           var gameRate = results[i].rating;
           var consoleType = results[i].platforms[0].platform.name;
           var descResults = response.results
+          var releaseDate = results[i].released
           console.log(descResults)
           
           var description = descResults[0].deck || "No Description Available";
@@ -45,7 +46,7 @@ $("#search").click(function () {
           var cardBody = $("<div class='card-body cardBody'>");
           mainCard.append(cardBody);
           cardBody.append(thumbImg);
-          var gameInfo = "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType + "<br>" + "<h6 style='color: #05132D'><strong>Description: <br></h6></strong>" + description;
+          var gameInfo ="<h6 style='color: #05132D'><strong>Release: <br></h6></strong>" + releaseDate + "<br>" + "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType + "<br>" + "<h6 style='color: #05132D'><strong>Description: <br></h6></strong>" + description;
           cardBody.append(gameInfo);
           
           $(".mainDiv").append(mainCard);
