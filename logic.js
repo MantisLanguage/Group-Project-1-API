@@ -5,64 +5,67 @@ $("#search").click(function () {
   var game = $("#searchValue").val()
   console.log(game.length)
   if (game.length === 0) {
-    
+
   } else {
-    
-    
+
+
     $.ajax({
       url: "https://api.rawg.io/api/games?search=" + game,
       method: "GET"
-      
+
     }).then(function (response) {
       var results = response.results;
       console.log(results);
       for (let i = 0; i < results.length; i++) {
-        
-        
-        // $.ajax({
-        //   url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=69ea76a955ce9930f89d964bb86ed1e1e2e17ef6&format=json&query=" + results[i].name + "&resources=game&limit=1",
-        //   method: "GET"
-        // }).then(function (response) {
+
+
+        $.ajax({
+          url: "https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=69ea76a955ce9930f89d964bb86ed1e1e2e17ef6&format=json&query=" + results[i].name + "&resources=game&limit=1",
+          method: "GET"
+        }).then(function (response) {
           var gameName = results[i].name;
           var imgURL = results[i].short_screenshots[1].image;
           var gameRate = results[i].rating;
           var consoleType = results[i].platforms[0].platform.name;
-          // var descResults = response.results
+          var descResults = response.results
           var releaseDate = results[i].released
-          // console.log(descResults)
-          
-          // var description = descResults[0].deck || "No Description Available";
-          
-          
+          console.log(descResults)
+
+          var description = descResults[0].deck || "No Description Available";
+
+
           var mainCard = $("<div class='animated slideInRight card mb-3 gameCard' style='max-width: 20rem;'>");
-          
+
           var cardHeader = $("<div class='card-header gameName'>");
           cardHeader.text(gameName);
           mainCard.append(cardHeader);
-          
+
           var thumbImg = $("<img style='height: 200px; width: 100%; display: inline-block;'>");
           thumbImg.attr("src", imgURL);
-          
+
           var cardBody = $("<div class='card-body cardBody'>");
           mainCard.append(cardBody);
           cardBody.append(thumbImg);
-          var gameInfo ="<h6 style='color: #05132D'><strong>Release: <br></h6></strong>" + releaseDate + "<br>" + "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType;
+          var gameInfo = "<h6 style='color: #05132D'><strong>Release: <br></h6></strong>" + releaseDate + "<br>" + "<h6 style='color: #05132D'><strong>Rating: </h6></strong> " + gameRate + "<br>" + "<h6 style='color: #05132D'><strong>Platform: </h6></strong> " + consoleType + "<br>" + "<h6 style='color: #05132D'><strong>Description: </h6></strong> " + description;
           cardBody.append(gameInfo);
-          
+
           $(".mainDiv").append(mainCard);
-}});
-        
-        
-      }
-    });
-    
-  
-  $(document).ready(function () {
-    setTimeout(function(){
-        $('#logo').show();
-    }, 1000);
+        })
+      };
+
+
+    })
+  };
 });
-  
+
+
+
+//   $(document).ready(function () {
+//     setTimeout(function(){
+//         $('#logo').show();
+//     }, 1000);
+// });
+
   // $("#search").on("click", function () {
     //   event.preventDefault();
 //   var game = $("#searchValue").val();
